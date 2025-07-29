@@ -1,0 +1,148 @@
+$date
+Wed Jul  9 13:57:59 2025
+$end
+$version
+Riviera-PRO Version 2023.04.112.8911
+$end
+$timescale
+1 ps
+$end
+
+$scope module tb $end
+$var reg 1 ! clk $end
+$var reg 1 " clk50 $end
+$var real 64 # phase $end
+$var real 64 $ ton $end
+$var real 64 % toff $end
+
+$scope task calc $end
+$var real 64 & freq_hz $end
+$var real 64 ' duty_cycle $end
+$var real 64 ( phase_ns $end
+$var real 64 ) phase_out $end
+$var real 64 * ton_out $end
+$var real 64 + toff_out $end
+$upscope $end
+
+
+$scope task clkgen $end
+$var real 64 , phase_ns $end
+$var real 64 - ton_ns $end
+$var real 64 . toff_ns $end
+$var integer 32 / i $end
+$upscope $end
+
+$upscope $end
+
+$enddefinitions $end
+$dumpvars
+0!
+0"
+r2 #
+r1 $
+r9 %
+r100000000 &
+r0.1 '
+r2 (
+r2 )
+r1 *
+r9 +
+r2 ,
+r1 -
+r9 .
+bx /
+$end
+#5000
+1!
+#7000
+b0 /
+1"
+#8000
+0"
+#10000
+0!
+#15000
+1!
+#17000
+b1 /
+1"
+#18000
+0"
+#20000
+0!
+#25000
+1!
+#27000
+b10 /
+1"
+#28000
+0"
+#30000
+0!
+#35000
+1!
+#37000
+b11 /
+1"
+#38000
+0"
+#40000
+0!
+#45000
+1!
+#47000
+b100 /
+1"
+#48000
+0"
+#50000
+0!
+#55000
+1!
+#57000
+b101 /
+1"
+#58000
+0"
+#60000
+0!
+#65000
+1!
+#67000
+b110 /
+1"
+#68000
+0"
+#70000
+0!
+#75000
+1!
+#77000
+b111 /
+1"
+#78000
+0"
+#80000
+0!
+#85000
+1!
+#87000
+b1000 /
+1"
+#88000
+0"
+#90000
+0!
+#95000
+1!
+#97000
+b1001 /
+1"
+#98000
+0"
+#100000
+0!
+#105000
+1!
+#107000
+b1010 /
