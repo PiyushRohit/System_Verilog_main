@@ -1,5 +1,5 @@
 module chu_uart
- #(parameter FIFO_DEPTH_BIT = 8;)
+ #(parameter FIFO_DEPTH_BIT = 8)
  (
   input logic clk,
   input logic reset ,
@@ -23,13 +23,15 @@ module chu_uart
  uart_unit (.* , .dvsr(dvsr_reg) , .w_data(wr_data[7:0]));
 
  always_ff @(posedge clk,posedge reset) 
-   if(reset) dvsr <= 0;
+   if(reset) dvsr_reg <= 0;
    else
     if(wr_dvsr) dvsr_reg <= wr_data[10:0];
-   assign wr_dvsr=(write && cs && (addr[1:0]==2'b01));
-   assign wr_uart =(write && cs && (addr[1:0] == 2'b10));
-   assign rd_uart = (write && cs && (addr[1:0]== 2'b11));
 
-   assign data= {22'h000000 , tx_full ,rx_empty ,r_data};
-   
+
+assign wr_dvsr=(write && cs && (addr[1:0]==2'b01));
+assign wr_uart =(write && cs && (addr[1:0] == 2'b10));
+assign rd_uart = (read && cs && (addr[1:0]== 2'b11));
+
+assign rd_data= {22'h000000 , tx_full ,rx_empty ,r_data};
+
 endmodule
